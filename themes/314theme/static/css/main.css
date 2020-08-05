@@ -48,3 +48,13 @@ div.main-content {
     margin : auto;
     padding: 10px;
 }
+
+nav {
+    min-height: 70px;
+}
+
+div.navbar-gof {
+    width: 100%;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
+}
