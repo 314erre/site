@@ -1,0 +1,50 @@
+
+* {
+    font-family: "Roboto Mono";
+    margin : 0px;
+    padding : 0px;
+}
+
+body {
+    background-color: #000a12;
+    color : white;
+}
+
+span.icon { 
+    color: blueviolet;
+    font-size: 1em;
+}
+
+a, a:visited, a:hover, a:active {
+    
+    text-decoration: none;
+}
+
+div.navbar-container {
+    display: flex;
+    flex-direction: row;
+    border-bottom : solid white 1px;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+div.navbar-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+div.navbar-social { 
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+i.fab { 
+    margin : 0.3em;
+}
+
+div.main-content { 
+    max-width: 1000px;
+    margin : auto;
+    padding: 10px;
+}

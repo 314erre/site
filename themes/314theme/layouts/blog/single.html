@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="section">
+    <article>
+        <h1 class="title is-1">{{ .Title }}</h1>
+        <div class="title subtitle heading is-6">
+            <div class="columns is-vcentered is-mobile">
+                <div class="column">
+                    <p>{{ .Site.Params.Author }}</p>
+                    <p><time>{{ .PublishDate.Format "January 2, 2006" }}</time> |
+                        {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }}</p>
+                </div>
+            </div>
+            <div class="column">
+                {{ range $idx, $category := .Params.categories }}
+                {{- if ne $idx 0 }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>
+                {{- end }}
+              </div>
+            <div class="content">
+                {{ .Content }}
+            </div>
+    </article>
+</section>
+{{ end }}

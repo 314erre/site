@@ -1,0 +1,15 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script src="https://kit.fontawesome.com/7c7cbe1495.js" crossorigin="anonymous"></script>
+    <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{end }}{{ end }}">
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500" rel="stylesheet">
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ if not (in (string .Site.BaseURL) "localhost") }}
+    {{ end }}
+</head>
