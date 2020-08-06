@@ -2,7 +2,8 @@ let playing = false;
 let grid = {};
 
 
-const updateCellState = (x, y, state) => {
+const updateCellState = (x, y, state, strength = 0) => {
+    console.log("Srength is : ",strength);
     let cell = document.getElementById(`${x}-${y}`);
     if (state) {
         cell.classList.add("alive");
@@ -19,12 +20,10 @@ const getAliveNeighborsAmount = (x, y) => {
                 let div = document.getElementById(`${x - i}-${y - j}`);
                 if (div && div.classList.contains("alive")) {
                     neighbors += 1;
-
                 }
             }
         }
     }
-    // console.log("You've got neighbours : ", neighbors);
     return neighbors;
 }
 
@@ -47,7 +46,8 @@ const gof = async () => {
     for (let i = 0; i < grid.rows; i++) {
         for (let j = 0; j < grid.cols; j++) {
             let state = states[[i, j]];
-            updateCellState(i, j, state);
+            let strength = 0;
+            updateCellState(i, j, state, strength);
         }
     }
 }
@@ -69,7 +69,7 @@ const colorizeMyNeighbors = (el) => {
     let coords = el.id.split("-").map(x => parseInt(x));
     for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
-            let div =  document.getElementById(`${coords[0]-i}-${coords[1]-j}`);
+            let div = document.getElementById(`${coords[0] - i}-${coords[1] - j}`);
             if (div) {
                 div.classList.add("alive");
             }
@@ -119,9 +119,9 @@ const initWindow = async () => {
             return;
         }
         gof();
-    }, 100);
+    }, 1000);
 }
 
 
 window.addEventListener("load", initWindow, false);
-window.addEventListener("resize", initWindow, false);
+// window.addEventListener("resize", initWindow, false);

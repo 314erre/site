@@ -75,12 +75,12 @@ div.navbar-gof {
     height: 5px;
     background-color: whitesmoke;
     margin: 1px;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
     transition-timing-function: ease;
 }
 
 .alive {
-    background-color: blueviolet;
+    background-color: rgb(142, 45, 233);
 }
 
 .chosen {
