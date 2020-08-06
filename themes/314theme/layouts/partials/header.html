@@ -7,9 +7,12 @@
                         <h1>{{ .Site.Title }}</h1>
                     </span>
                 </a>
-                <p>{{ .Site.Params.subtitle }}</p>
+                <div class="subtitle">
+                    {{ .Site.Params.subtitle }}
+                </div>
             </div>
-            <div class="navbar-gof"></div>
+            <div id="gcontainer" class="navbar-gof">
+            </div>
             <div class="navbar-social">
                 {{ range .Site.Menus.social }}
                 <a href="{{ .URL }}" class="navbar-item is-hidden-touch" title="{{ .Name }}"><span
