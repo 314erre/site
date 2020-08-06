@@ -95,8 +95,8 @@ const initGof = async () => {
     let gofContainer = document.getElementById("gcontainer");
     gofContainer.innerHTML = "";
     let cols = 0, rows = 0;
-    cols = Math.round((gofContainer.clientWidth - cellprops.padding) / cellprops.width);
-    rows = Math.round((gofContainer.clientHeight - cellprops.padding) / cellprops.width);
+    cols = Math.floor((gofContainer.clientWidth - 2*cellprops.padding) / cellprops.width);
+    rows = Math.floor((gofContainer.clientHeight - 2*cellprops.padding) / cellprops.width);
     grid = {
         rows: rows,
         cols: cols
@@ -108,20 +108,20 @@ const initGof = async () => {
     }
 }
 
-const initWindow = async () => {
-    playing = false;
+const play = async () => {
+    while (playing == true);
+    playing = true;
     await initGof();
     await randomCellsStart(grid, 0.70);
-    playing = true;
     let loop = setInterval(() => {
         if (playing == false) {
             clearInterval(loop);
             return;
+        } else {
+            gof();
         }
-        gof();
     }, 1000);
 }
 
-
-window.addEventListener("load", initWindow, false);
-// window.addEventListener("resize", initWindow, false);
+window.addEventListener("load", play, false);
+// window.addEventListener("resize", reset, false);
