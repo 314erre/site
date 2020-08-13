@@ -61,7 +61,7 @@ div.navbar-social {
     margin-left: auto;
 }
 
-i.fab { 
+i.fab, i.fas { 
     margin : 0.3em;
 }
 
@@ -78,15 +78,12 @@ nav {
 div.navbar-gof {
     width: 80%;
     border : solid white 1px;
-    margin-right: 0.4em;
-    margin-left: 0.4em;
     display: flex;
     flex-wrap: wrap;
     align-content : center;
     align-items: center;
     justify-content: center;
-    
-    height: 50px;
+    height: 57px;
 }
 
 .gcell {
@@ -115,4 +112,14 @@ div.navbar-gof {
     font-weight: lighter;
     letter-spacing: 3px;
     text-transform: uppercase;
+}
+
+.fofimg{
+    width: 200px;
+    height: 200px;
+}
+
+.fofcontainer a {
+    margin : 10px;
+    padding : 5px;
 }

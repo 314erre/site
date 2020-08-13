@@ -2,6 +2,8 @@ baseURL = "http://blog.314erre.rocks/"
 languageCode = "en-us"
 title = "314erre"
 theme = "314theme"
+pygmentsUseClasses =  true
+pygmentsCodeFences = true
 
 [params]
     description = "My site description"
@@ -22,6 +24,10 @@ theme = "314theme"
     name = "Twitter"
     url = "https://twitter.com/"
     pre = "<i class='fab fa-twitter'></i>"
+[[menu.social]]
+    name = "Root-me"
+    url = "https://www.root-me.org/Pierre-44221/"
+    pre = "<i class='fas fa-skull'></i>"
 
 [markup]
   [markup.highlight]

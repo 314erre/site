@@ -6,9 +6,12 @@
         <div class="main-content">
             {{- partial "header.html" . -}}
             <section id="main">
-              <div>
-               <h1 id="title">{{ .Title }} :(</h1>
-              </div>
+                <center class="fofcontainer">
+                    <img src="{{ "img/Froggit.webp" | relURL }}" alt="Froggit" class="fofimg">
+                     <h1 id="title">{{ .Title }} :(</h1>
+                     <a href="#">STAY HERE</a>
+                     <a href="/">GO HOME</a>
+                </center>
             </section>
             {{- partial "footer.html" . -}}
         </div>
