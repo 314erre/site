@@ -138,3 +138,9 @@ div.navbar-gof {
     margin : 10px;
     padding : 5px;
 }
+
+.highlight {
+    overflow-y: scroll;
+    scrollbar-color: rgb(142, 45, 233) #ffffff00;
+    scrollbar-width: thin;
+}

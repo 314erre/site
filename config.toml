@@ -4,6 +4,7 @@ title = "314erre"
 theme = "314theme"
 pygmentsUseClasses =  true
 pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
 
 [params]
     description = "My site description"

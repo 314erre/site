@@ -38,7 +38,7 @@ alert(s);
 ```
  
 ```python
-s = "Python syntax highlighting"
+s = "Python syntax highlighting with a very long long long string long long foo bar foo long ;) Python syntax highlighting with a very long long long string long long foo bar foo long ;)"
 print s
 ```
  
@@ -46,9 +46,8 @@ print s
 No language indicated, so no syntax highlighting. 
 But let's throw in a <b>tag</b>.
 ```
-
-{{< highlight python "hl_lines=1,linenostart=199" >}}
-s = "Python syntax highlighting"
+{{< highlight python "linenos=table,hl_lines=1 ,linenostart=199" >}}
+s = "Python syntax highlighting Python syntax highlighting with a very long long long string long long foo bar foo long ;) Python syntax highlighting with a very long long long string long long foo bar foo long ;) Python syntax highlighting with a very long long long string long long foo bar foo long ;) Python syntax highlighting with a very long long long string long long foo bar foo long ;)"
 print s 
 {{< / highlight >}}
 
