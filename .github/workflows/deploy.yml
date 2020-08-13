@@ -26,7 +26,7 @@ jobs:
         KEY: ${{ secrets.SSHKEY }}
       with:
         source: "./public/*"
-        target: "/var/www/html/blog.314erre.rocks/public/"
+        target: "/var/www/html/blog.314erre.rocks/"
 
     - name: Deploy - Listing files
       uses: appleboy/ssh-action@master
