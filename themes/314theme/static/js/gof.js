@@ -33,7 +33,6 @@ const getStates = async () => {
             let n = getAliveNeighborsAmount(i, j);
             let isAlive = document.getElementById(`${i}-${j}`).classList.contains("alive");
             let fstate = (n == 3) || (isAlive && n == 2);
-            // console.log("Futur state : ", fstate)
             states[[i, j]] = fstate;
         }
     }
@@ -94,8 +93,8 @@ const initGof = async () => {
     let gofContainer = document.getElementById("gcontainer");
     gofContainer.innerHTML = "";
     let cols = 0, rows = 0;
-    cols = Math.floor((gofContainer.clientWidth - 2*cellprops.padding) / cellprops.width);
-    rows = Math.floor((gofContainer.clientHeight - 2*cellprops.padding) / cellprops.width);
+    cols = Math.round((gofContainer.clientWidth - 2*cellprops.padding) / cellprops.width);
+    rows = Math.round((gofContainer.clientHeight - 2*cellprops.padding) / cellprops.width);
     grid = {
         rows: rows,
         cols: cols
@@ -116,4 +115,3 @@ const play = async () => {
 }
 
 window.addEventListener("load", play, false);
-// window.addEventListener("resize", reset, false);

@@ -1,10 +1,16 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
 
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-  </div>
-</section>
-
-{{ partial "footer.html" . }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body>
+        <div class="main-content">
+            {{- partial "header.html" . -}}
+            <section id="main">
+              <div>
+               <h1 id="title">{{ .Title }} :(</h1>
+              </div>
+            </section>
+            {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

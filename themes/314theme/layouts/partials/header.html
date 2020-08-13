@@ -1,13 +1,14 @@
 <header>
     <nav class="navbar" role="navigation">
         <div class="navbar-container">
+            <img src="{{ "img/Froggit.webp" | relURL }}" alt="Froggit" class="froggit">
             <div class="navbar-brand">
                 <a href="/" title="home" class="navbar-item">
                     <span class="logo">
                         <h1>{{ .Site.Title }}</h1>
                     </span>
                 </a>
-                <div class="subtitle">
+                <div class="nsubtitle">
                     {{ .Site.Params.subtitle }}
                 </div>
             </div>
