@@ -109,18 +109,11 @@ const initGof = async () => {
 }
 
 const play = async () => {
-    while (playing == true);
-    playing = true;
     await initGof();
     await randomCellsStart(grid, 0.70);
     let loop = setInterval(() => {
-        if (playing == false) {
-            clearInterval(loop);
-            return;
-        } else {
             gof();
-        }
-    }, 1000);
+    }, 1700);
 }
 
 window.addEventListener("load", play, false);
