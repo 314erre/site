@@ -3,7 +3,6 @@ let grid = {};
 
 
 const updateCellState = (x, y, state, strength = 0) => {
-    console.log("Srength is : ",strength);
     let cell = document.getElementById(`${x}-${y}`);
     if (state) {
         cell.classList.add("alive");
