@@ -86,17 +86,32 @@ div.navbar-gof {
     height: 57px;
 }
 
+@keyframes cellTransition {
+    from {
+       background-color:rgb(109, 87, 231);
+       border-radius: 100%;
+    }
+    
+    to {
+        background-color: rgb(142, 45, 233);
+        border-radius: 0%;
+    }
+}
+
 .gcell {
     width: 5px;
     height: 5px;
     background-color: whitesmoke;
     margin: 1px;
+    /*
     transition-duration: 0.2s;
     transition-timing-function: ease;
+    */
 }
 
 .alive {
     background-color: rgb(142, 45, 233);
+    animation: 1.7s ease-out cellTransition;
 }
 
 .chosen {
