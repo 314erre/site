@@ -25,7 +25,7 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
       with:
-        source: "./public/"
+        source: "./public/*"
         target: "/var/www/html/blog.314erre.rocks/public_html/"
 
     - name: Deploy - Listing files
