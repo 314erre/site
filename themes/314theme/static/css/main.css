@@ -29,13 +29,15 @@ body {
     color : white;
 }
 
-span.icon { 
+span.icon, .social-icon { 
     color: blueviolet;
+    fill: blueviolet;
     font-size: 1em;
+    filter : invert(1)
 }
 
 a, a:visited, a:hover, a:active {
-    
+    color : rgb(142, 45, 233);
     text-decoration: none;
 }
 
@@ -45,7 +47,7 @@ div.navbar-container {
     border-bottom : solid white 1px;
     padding-bottom: 1em;
     margin-bottom: 0.5em;
-    align-items: center;
+    align-items: top;
     align-content: center;
 }
 
@@ -56,9 +58,14 @@ div.navbar-brand {
 }
 
 div.navbar-social { 
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   height: 57px;
+   margin-right: 20px;
+   margin-left: 5px;
+   align-items: center;
+   justify-content: center;
 }
 
 i.fab, i.fas { 
@@ -76,7 +83,6 @@ nav {
 }
 
 div.navbar-gof {
-    width: 80%;
     border : solid white 1px;
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +90,7 @@ div.navbar-gof {
     align-items: center;
     justify-content: center;
     height: 57px;
+    width:70%;
 }
 
 @keyframes cellTransition {
@@ -143,4 +150,25 @@ div.navbar-gof {
     overflow-y: scroll;
     scrollbar-color: rgb(142, 45, 233) #ffffff00;
     scrollbar-width: thin;
+}
+
+@keyframes testPi {
+    to {
+        color : rgb(142, 45, 233);
+        
+    }
+}
+
+#pi {
+   background-color: #fff;
+}
+
+.logo h1 {
+    border : 1px solid white;
+}
+
+main div.content ul,ol {
+    margin-top : 5px;
+    margin-left: 40px;
+    margin-bottom : 5px;
 }

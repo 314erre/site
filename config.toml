@@ -10,25 +10,28 @@ pygmentsCodefencesGuessSyntax = true
     description = "My site description"
     author = "Pierre"
     subtitle = "IT student"
+
 [[menu.main]]
-    name = "About"
-    url = "/about"
+    name = "Home"
+    url = "/"
 
 [[menu.main]]
     name = "Blog"
     url = "/blog"
+
+
 [[menu.social]]
     name = "GitHub"
     url = "https://github.com/"
-    pre = "<i class='fab fa-github'></i>"
+    pre = "<i class='fab fa-github social-icon'></i>"
 [[menu.social]]
     name = "Twitter"
     url = "https://twitter.com/"
-    pre = "<i class='fab fa-twitter'></i>"
+    pre = "<i class='fab fa-twitter social-icon'></i>"
 [[menu.social]]
     name = "Root-me"
     url = "https://www.root-me.org/Pierre-44221/"
-    pre = "<i class='fas fa-skull'></i>"
+    pre = "<img src='/img/rootme.svg' class='social-icon' width='40'>"
 
 [markup]
   [markup.highlight]
