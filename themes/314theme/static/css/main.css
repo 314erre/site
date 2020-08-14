@@ -169,6 +169,26 @@ div.navbar-gof {
 
 main div.content ul,ol {
     margin-top : 5px;
-    margin-left: 40px;
     margin-bottom : 5px;
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+main div.content li {
+    color : white;
+}
+
+.hexdump {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.hexdump .addr {
+    padding-right: 10px;
+    color : rgb(142, 45, 233);
+}
+
+.hexdump .hexval{
+    word-spacing: 10px;
+    padding-right: 10px;
 }
