@@ -181,6 +181,8 @@ main div.content li {
 .hexdump {
     margin-bottom: 10px;
     margin-top: 10px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
 }
 
 .hexdump .addr {
@@ -191,4 +193,11 @@ main div.content li {
 .hexdump .hexval{
     word-spacing: 10px;
     padding-right: 10px;
+}
+
+.selectedRow {
+    background-color: lawngreen;
+    color: red;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
 }

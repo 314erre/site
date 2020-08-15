@@ -32,5 +32,5 @@
 
 I'm pretty much interested in : 
 * Hacking (mostly web applications & penetration testing)
-* Food & Gastronomie
+* Food & Gastronomy
 * Video Games & Esport
