@@ -298,3 +298,19 @@ main div.content li {
 article .heading {
     
 }
+
+.heading h1::before {
+    content : "<";
+    color : #7e57c2;
+    margin-right: 10px;
+}
+
+.heading h1::after {
+    content : "/>";
+    color : #7e57c2;
+    margin-left : 10px;
+}
+
+.heading h1 {
+    margin: 5px 5px 0px 0px;
+}

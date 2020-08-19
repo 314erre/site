@@ -31,7 +31,7 @@ pygmentsCodefencesGuessSyntax = true
 [[menu.social]]
     name = "Root-me"
     url = "https://www.root-me.org/Pierre-44221/"
-    pre = "<img src='/img/rootme.svg' class='social-icon root-me'>"
+    pre = "<i class='fas fa-skull social-icon'></i>"
 
 [markup]
   [markup.highlight]
