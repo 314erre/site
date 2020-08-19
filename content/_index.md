@@ -1,6 +1,7 @@
 # Hi there
 
 {{<  rawhtml >}}
+<div class="hexdumpc">
 <table class="hexdump">
 <tr>
 <td class="addr">00000000:</td>
@@ -28,6 +29,7 @@
 <td class="ascii">Alpes..</td>
 </tr>
 </table>
+</div>
 {{< / rawhtml >}}
 
 I'm pretty much interested in : 

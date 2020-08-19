@@ -2,7 +2,7 @@
 <section class="section">
     <article>
         <h1 class="title is-1">{{ .Title }}</h1>
-        <div class="title heading is-6">
+        <div class="title heading">
             <div class="columns is-vcentered is-mobile">
                 <div class="column">
                     <p>{{ .Site.Params.Author }}</p>
@@ -12,12 +12,14 @@
             </div>
             <div class="column">
                 {{ range $idx, $category := .Params.categories }}
-                {{- if ne $idx 0 }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>
+                {{- if ne $idx 0 }} {{ end }}<a
+                    href="{{ "categories/" | relURL }}{{ $category | urlize }}">{{ $category }}</a>
                 {{- end }}
-              </div>
-            <div class="content">
-                {{ .Content }}
             </div>
+        </div>
+        <div class="content">
+            {{ .Content }}
+        </div>
     </article>
     <aside>
         {{ .TableOfContents }}
