@@ -4,18 +4,54 @@
     font-weight: normal;
     font-style: normal; 
 }
-  
 @font-face {
     font-family: '8bitOperatorPlus-Bold';
     src: url("/fonts/8bitOperatorPlus-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/8bitOperatorPlus-Bold.woff") format("woff"), url("/fonts/8bitOperatorPlus-Bold.ttf") format("truetype"), url("/fonts/8bitOperatorPlus-Bold.svg#8bitOperatorPlus-Bold") format("svg");
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "MesloLGS-Italic";
+    src : url("/fonts/MesloLGS-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "MesloLGS-Regular";
+    src : url("/fonts/MesloLGS-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MesloLGS-Bold";
+    src : url("/fonts/MesloLGS-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Hack-Bold";
+    src : url("/fonts/Hack-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Hack-Regular";
+    src : url("/fonts/Hack-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Hack-Italic";
+    src : url("/fonts/Hack-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
-    font-family: "8bitOperatorPlus-Regular";
-    margin : 0px;
-    padding : 0px;
+   
+    font-family: "Hack-Regular";
 }
 
 .froggit{
@@ -25,26 +61,35 @@
 }
 
 body {
-    background-color: #000a12;
-    color : white;
+    background-color: #212121;
+    color : #d9d9d9;
+    font-size: 14px;
+    margin : 0px;
+    padding : 0px;
+    /* line-height: 1.725; */
+    /* text-rendering: geometricPrecision; */
 }
 
 span.icon, .social-icon { 
-    color: blueviolet;
-    fill: blueviolet;
+    color: #7e57c2;
+    fill: #7e57c2;
     font-size: 1em;
     filter : invert(1)
 }
 
 a, a:visited, a:hover, a:active {
-    color : rgb(142, 45, 233);
+    color : #7e57c2;
     text-decoration: none;
+}
+
+a:hover { 
+    color: #e254cf;
 }
 
 div.navbar-container {
     display: flex;
     flex-direction: row;
-    border-bottom : solid white 1px;
+    border-bottom : solid #4d4d4d 1px;
     padding-bottom: 1em;
     margin-bottom: 0.5em;
     align-items: top;
@@ -79,11 +124,11 @@ div.main-content {
 }
 
 nav {
-    min-height: 70px;
+    /* min-height: 70px; */
 }
 
 div.navbar-gof {
-    border : solid white 1px;
+    border : solid #d9d9d9 1px;
     display: flex;
     flex-wrap: wrap;
     align-content : center;
@@ -95,12 +140,12 @@ div.navbar-gof {
 
 @keyframes cellTransition {
     from {
-       background-color:rgb(219, 43, 181);
+       background-color: #e254cf;
        border-radius: 100%;
     }
     
     to {
-        background-color: rgb(142, 45, 233);
+        background-color: #7e57c2;
         border-radius: 0%;
     }
 }
@@ -108,16 +153,12 @@ div.navbar-gof {
 .gcell {
     width: 5px;
     height: 5px;
-    background-color: whitesmoke;
+    background-color: #d9d9d9;
     margin: 1px;
-    /*
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-    */
 }
 
 .alive {
-    background-color: rgb(142, 45, 233);
+    background-color: #7e57c2;
     animation: 1.7s ease-out cellTransition;
 }
 
@@ -148,14 +189,13 @@ div.navbar-gof {
 
 .highlight {
     overflow-y: scroll;
-    scrollbar-color: rgb(142, 45, 233) #ffffff00;
+    scrollbar-color:#7e57c2 #ffffff00;
     scrollbar-width: thin;
 }
 
 @keyframes testPi {
     to {
-        color : rgb(142, 45, 233);
-        
+        color :#7e57c2;
     }
 }
 
@@ -164,7 +204,8 @@ div.navbar-gof {
 }
 
 .logo h1 {
-    border : 1px solid white;
+    border : 1px solid #d9d9d9;
+    margin : auto;
 }
 
 main div.content ul,ol {
@@ -175,19 +216,33 @@ main div.content ul,ol {
 }
 
 main div.content li {
-    color : white;
+    color : #d9d9d9;
 }
 
 .hexdump {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top : 1px dashed #4d4d4d;
+    border-bottom : 1px dashed #4d4d4d;
     margin-bottom: 10px;
     margin-top: 10px;
     transition-duration: 0.2s;
     transition-timing-function: ease;
+    border-collapse: collapse;
+    
 }
 
 .hexdump .addr {
-    padding-right: 10px;
-    color : rgb(142, 45, 233);
+    padding-right: 0.3em;
+    color : #7e57c2;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+}
+
+.hexdump .addr:hover {
+    color : #e254cf;
+    font-size: 13px;
 }
 
 .hexdump .hexval{
@@ -196,8 +251,20 @@ main div.content li {
 }
 
 .selectedRow {
-    background-color: lawngreen;
-    color: red;
+    background-color: #7e57c246;
     transition-duration: 0.2s;
     transition-timing-function: ease;
+}
+
+.nsubtitle {
+    margin-top: 10px;
+    letter-spacing: 0.3em;
+    font-size: 15px;
+}
+
+#footer {
+    position: absolute;
+    padding-bottom: 4rem;
+    bottom: 0;
+    color : #4d4d4d;
 }
