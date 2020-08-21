@@ -49,6 +49,10 @@
     font-style: normal;
 }
 
+:root {
+    --main-color : #7E57C2;
+}
+
 * {
    
     font-family: "Hack-Regular";
@@ -75,14 +79,14 @@ body {
 }
 
 span.icon, .social-icon { 
-    color: #7e57c2;
-    fill: #7e57c2;
+    color: var(--main-color);
+    fill: var(--main-color);
     font-size: 1em;
     filter : invert(1)
 }
 
 a, a:visited, a:hover, a:active {
-    color : #7e57c2;
+    color : var(--main-color);
     text-decoration: none;
 }
 
@@ -137,7 +141,7 @@ h2:hover::before {
 h2::before { 
     content: ">";
     margin-right: 10px;
-    color : #7e57c2;
+    color : var(--main-color);
     transition-duration: 0.2s;
     transition-timing-function: ease;
 }
@@ -168,7 +172,7 @@ div.navbar-gof {
     }
     
     to {
-        background-color: #7e57c2;
+        background-color: var(--main-color);
         border-radius: 0%;
     }
 }
@@ -181,7 +185,7 @@ div.navbar-gof {
 }
 
 .alive {
-    background-color: #7e57c2;
+    background-color: var(--main-color);
     animation: 1.7s ease-out cellTransition;
 }
 
@@ -212,13 +216,13 @@ div.navbar-gof {
 
 .highlight {
     overflow-y: scroll;
-    scrollbar-color:#7e57c2 #ffffff00;
+    scrollbar-color:var(--main-color) #ffffff00;
     scrollbar-width: thin;
 }
 
 @keyframes testPi {
     to {
-        color :#7e57c2;
+        color :var(--main-color);
     }
 }
 
@@ -259,7 +263,7 @@ main div.content li {
 
 .hexdump .addr {
     padding-right: 0.3em;
-    color : #7e57c2;
+    color : var(--main-color);
     cursor: pointer;
     transition-duration: 0.1s;
     transition-timing-function: ease;
@@ -276,7 +280,7 @@ main div.content li {
 }
 
 .selectedRow {
-    background-color: #7e57c246;
+    background-color: var(--main-color)46;
     transition-duration: 0.2s;
     transition-timing-function: ease;
 }
@@ -301,13 +305,13 @@ article .heading {
 
 .heading h1::before {
     content : "<";
-    color : #7e57c2;
+    color : var(--main-color);
     margin-right: 10px;
 }
 
 .heading h1::after {
     content : "/>";
-    color : #7e57c2;
+    color : var(--main-color);
     margin-left : 10px;
 }
 

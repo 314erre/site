@@ -33,8 +33,18 @@ Fusce facilisis non ante quis blandit...
 Maecenas eu libero ac justo tempor pellentesque...
 
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+const addHexListeners = () => {
+    let hexs = document.querySelectorAll(".hexdump .addr");
+    for (let elem of hexs) {
+        elem.addEventListener("mouseover",(event)=>{
+            colorizeRow(event.target.parentElement);
+        });
+        elem.addEventListener("mouseleave",(event)=>{
+            colorizeRow(event.target.parentElement);
+        });
+    }
+}
+window.addEventListener("load", addHexListeners, false);
 ```
  
 ```python
